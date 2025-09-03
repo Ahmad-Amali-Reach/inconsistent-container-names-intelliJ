@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  producer-service:
+    image: amazoncorretto:21-alpine
+    container_name: producer-service
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  consumer-service:
+    build:
+      context: ./consumer-service
+      dockerfile: Dockerfile
+    container_name: consumer-app
+    ports:
+      - "8081:8081"
+    networks:
+      - app-network
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - PRODUCER_SERVICE_URL=http://host.docker.internal:8080
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+networks:
+  app-network:
+    external: true
+    driver: bridge

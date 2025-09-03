@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="52fc0b50-36f0-4d5d-8a53-9d686077c8ae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/consumer-service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-service/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-service/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-service/.idea/remote-targets.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-service/src/main/java/com/example/consumer/ConsumerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-service/src/main/java/com/example/consumer/ConsumerServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/.idea/remote-targets.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/.run/producer-service.run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/.run/remote-targets.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/docker-compose.producer.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/src/main/java/com/example/producer/ProducerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/src/main/java/com/example/producer/ProducerServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/consumer-service">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/producer-service">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="32A48tvZqBvKWEovHyhiezbBy0G" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Run.executor": "Run",
+    "Docker.docker-compose.yml.consumer-service: Compose Deployment.executor": "Run",
+    "Gradle.Build producer-service.executor": "Run",
+    "Gradle.Producer Service (Gradle).executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.ProducerServiceApplication.executor": "Run",
+    "Spring Boot.producer-service-run.executor": "Run",
+    "Spring Boot.producer-service.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/ahmadamali/IdeaProjects/inconsistent-container-names-intelliJ/producer-service/.run",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.24234234",
+    "project.structure.side.proportion": "0.4517685",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/producer-service/.run" />
+      <recent name="$PROJECT_DIR$/producer-service" />
+      <recent name="$PROJECT_DIR$/consumer-service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/producer-service" />
+      <recent name="$PROJECT_DIR$/.idea" />
+      <recent name="$PROJECT_DIR$/producer-service/.run" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.docker-compose.yml.consumer-service: Compose Deployment">
+    <configuration name="Run" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="sun.jvm.hotspot.HelloWorld" />
+      <module name="inconsistent-container-names-intelliJ" />
+      <target name="producer-service" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/producer-service" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="producer-service-run" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="producer-service.main" />
+      <target name="producer-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.producer.ProducerServiceApplication" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.consumer-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="consumer-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Run" />
+      <item itemvalue="Docker.docker-compose.yml.consumer-service: Compose Deployment" />
+      <item itemvalue="Spring Boot.producer-service" />
+      <item itemvalue="Spring Boot.producer-service-run" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.consumer-service: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="52fc0b50-36f0-4d5d-8a53-9d686077c8ae" name="Changes" comment="" />
+      <created>1756849886751</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756849886751</updated>
+      <workItem from="1756849888051" duration="3124000" />
+      <workItem from="1756853011536" duration="380000" />
+      <workItem from="1756853396961" duration="400000" />
+      <workItem from="1756853805716" duration="61000" />
+      <workItem from="1756853873235" duration="1473000" />
+      <workItem from="1756914189935" duration="36000" />
+      <workItem from="1756914237729" duration="2303000" />
+      <workItem from="1756916542266" duration="670000" />
+      <workItem from="1756917219754" duration="957000" />
+      <workItem from="1756918180291" duration="1000" />
+      <workItem from="1756918195270" duration="535000" />
+      <workItem from="1756918747104" duration="6571000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
