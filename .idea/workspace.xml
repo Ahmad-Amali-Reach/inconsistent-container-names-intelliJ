@@ -5,32 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52fc0b50-36f0-4d5d-8a53-9d686077c8ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/consumer-service/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-service/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-service/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-service/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-service/.idea/remote-targets.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-service/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-service/src/main/java/com/example/consumer/ConsumerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-service/src/main/java/com/example/consumer/ConsumerServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/.idea/remote-targets.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/.run/producer-service.run.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/.run/remote-targets.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/docker-compose.producer.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/src/main/java/com/example/producer/ProducerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/src/main/java/com/example/producer/ProducerServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +23,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -59,37 +35,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Run.executor": "Run",
-    "Docker.docker-compose.yml.consumer-service: Compose Deployment.executor": "Run",
-    "Gradle.Build producer-service.executor": "Run",
-    "Gradle.Producer Service (Gradle).executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.ProducerServiceApplication.executor": "Run",
-    "Spring Boot.producer-service-run.executor": "Run",
-    "Spring Boot.producer-service.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/ahmadamali/IdeaProjects/inconsistent-container-names-intelliJ/producer-service/.run",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.24234234",
-    "project.structure.side.proportion": "0.4517685",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Run.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.consumer-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build producer-service.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Producer Service (Gradle).executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ProducerServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.producer-service-run.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.producer-service.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ahmadamali/IdeaProjects/ext-local-services&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.24234234&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4517685&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/producer-service/.run" />
@@ -141,7 +118,9 @@
       </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml.consumer-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -195,7 +174,9 @@
       <workItem from="1756917219754" duration="957000" />
       <workItem from="1756918180291" duration="1000" />
       <workItem from="1756918195270" duration="535000" />
-      <workItem from="1756918747104" duration="6571000" />
+      <workItem from="1756918747104" duration="6689000" />
+      <workItem from="1756937322772" duration="277000" />
+      <workItem from="1756937897024" duration="448000" />
     </task>
     <servers />
   </component>
