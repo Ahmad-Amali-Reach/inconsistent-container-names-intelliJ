@@ -1,154 +1,136 @@
-# Container Dependencies Demo - Java Spring Boot Application
+# IntelliJ Docker Container Naming Issue - Support Ticket Reproduction
 
-This project demonstrates a containerized Java application with service dependencies using Docker Compose. It consists of two Spring Boot services that communicate with each other within the same Docker network.
+## Issue Summary
+When running a Spring Boot service through IntelliJ's Docker Compose remote target, the container gets a completely random name each time instead of using the `container_name` specified in the docker-compose.yml. This breaks service discovery between containers that depend on the predictable container name.
 
-## Architecture
+## Expected Behavior
+- Container should use the name specified in `container_name: producer-service` from docker-compose.yml
+- Other services should be able to reach it at `http://producer-service:8080`
 
-- **Producer Service** (Port 8080): Exposes REST API endpoints that provide data
-- **Consumer Service** (Port 8081): Depends on and consumes data from the producer service
+## Actual Behavior
+- IntelliJ generates random container names like `producer-service_run_abc123` 
+- Service discovery fails because dependent services can't find the expected container name
 
-## Services Overview
+## Environment
+- **IntelliJ IDEA**: [Version]
+- **Docker**: [Version]
+- **Docker Compose**: [Version]
+- **Java**: 21 (Amazon Corretto)
+- **Spring Boot**: 3.x
+- **OS**: Linux
 
-### Producer Service
-- Runs on port 8080
-- Provides endpoints:
-  - `GET /api/health` - Health check endpoint
-  - `GET /api/data` - Returns sample data
-  - `GET /api/data/{id}` - Returns data for specific ID
+## Project Structure
+```
+inconsistent-container-names-intelliJ/
+├── docker-compose.yml           # Consumer service + network setup
+├── producer-service/
+│   ├── docker-compose.producer.yml   # Producer service config
+│   ├── .idea/remote-targets.xml      # IntelliJ remote target config
+│   ├── src/main/java/...             # Spring Boot application
+│   └── build.gradle                  # Gradle build file
+└── consumer-service/
+    ├── src/main/java/...             # Spring Boot application
+    └── build.gradle                  # Gradle build file
+```
 
-### Consumer Service
-- Runs on port 8081
-- Depends on the producer service
-- Provides endpoints:
-  - `GET /api/health` - Health check endpoint
-  - `GET /api/consume` - Fetches data from producer service
-  - `GET /api/consume/{id}` - Fetches specific data from producer service
-  - `GET /api/check-producer` - Checks producer service health
+## Reproduction Steps
 
-## Key Features Demonstrating Container Dependencies
+### Step 1: Set up the Environment
+1. Clone this repository
+2. Ensure Docker and Docker Compose are installed and running
+3. Open IntelliJ IDEA
 
-1. **Service Discovery**: Consumer service connects to producer using Docker service name (`producer-service`)
-2. **Network Communication**: Both services run in the same Docker network (`app-network`)
-3. **Dependency Management**: Consumer service depends on producer service in docker-compose.yml
-4. **Environment Configuration**: Services use environment variables for configuration
+### Step 2: Create Docker Network
+```bash
+docker network create app-network
+```
 
-## Quick Start
+### Step 3: Start Consumer Service Stack
+```bash
+# From project root directory
+docker-compose up -d
+```
+This starts:
+- Consumer service on port 8081
+- Creates the app-network
+- Consumer expects to reach producer at `http://producer-service:8080`
 
-### Prerequisites
-- Docker and Docker Compose installed
-- Java 17+ (for local development)
-- Maven (for local development)
-
-### Running with Docker Compose
-
-1. **Build and start all services:**
-   ```bash
-   docker-compose up --build
+### Step 4: Configure IntelliJ Remote Target (Issue Location)
+1. Open the `producer-service` directory in IntelliJ
+2. The remote target is already configured in `.idea/remote-targets.xml`:
+   ```xml
+   <target name="producer-service" type="docker-compose">
+     <option name="configurationFiles">
+       <option value="$PROJECT_DIR$/../docker-compose.yml" />
+     </option>
+     <option name="serviceName" value="producer-service" />
+   </target>
    ```
 
-2. **Test the producer service:**
-   ```bash
-   curl http://localhost:8080/api/health
-   curl http://localhost:8080/api/data
-   ```
+### Step 5: Run Producer Service Through IntelliJ (Issue Trigger)
+1. In IntelliJ, open the producer-service project
+2. Go to Run Configurations
+3. Create/Select the Docker Compose remote target configuration
+4. Run the producer service using the remote target
 
-3. **Test the consumer service (demonstrates dependency):**
+### Step 6: Observe the Issue
+1. Check running containers:
+   ```bash
+   docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Ports}}"
+   ```
+2. **Expected**: Container named `producer-service`
+3. **Actual**: Container with random name like `producer-service_run_abc123def456`
+
+### Step 7: Verify Service Discovery Failure
+1. Test consumer service endpoint:
    ```bash
    curl http://localhost:8081/api/health
-   curl http://localhost:8081/api/consume
-   curl http://localhost:8081/api/check-producer
    ```
-
-### Testing Container Dependencies
-
-The consumer service demonstrates container dependencies in several ways:
-
-1. **Service Communication**: 
+2. Consumer service will fail to connect to producer because it's looking for `producer-service` container name
+3. Check consumer logs:
    ```bash
-   curl http://localhost:8081/api/consume
-   ```
-   This endpoint shows the consumer service successfully calling the producer service.
-
-2. **Health Check Chain**:
-   ```bash
-   curl http://localhost:8081/api/check-producer
-   ```
-   This shows the consumer checking the health of the producer service.
-
-3. **Data Retrieval with Parameters**:
-   ```bash
-   curl http://localhost:8081/api/consume/123
-   ```
-   This demonstrates parameterized calls between services.
-
-## Container Network Configuration
-
-The services communicate using:
-- **Service Name**: `producer-service` (defined in docker-compose.yml)
-- **Internal Port**: 8080 (producer) and 8081 (consumer)
-- **Network**: `app-network` (bridge network)
-- **DNS Resolution**: Docker automatically resolves service names to container IPs
-
-## Environment Variables
-
-- `PRODUCER_SERVICE_URL`: URL for the producer service (set in docker-compose.yml)
-- `SPRING_PROFILES_ACTIVE`: Spring profile (set to 'docker' for containerized deployment)
-
-## Troubleshooting
-
-If the consumer service cannot reach the producer service:
-
-1. Check if both services are running:
-   ```bash
-   docker-compose ps
+   docker logs consumer-app
    ```
 
-2. Check logs:
-   ```bash
-   docker-compose logs producer-service
-   docker-compose logs consumer-service
-   ```
+## Key Configuration Files
 
-3. Test network connectivity:
-   ```bash
-   docker-compose exec consumer-service ping producer-service
-   ```
-
-## Development
-
-### Local Development (without Docker)
-
-1. Start producer service:
-   ```bash
-   cd producer-service
-   mvn spring-boot:run
-   ```
-
-2. Start consumer service (in another terminal):
-   ```bash
-   cd consumer-service
-   PRODUCER_SERVICE_URL=http://localhost:8080 mvn spring-boot:run
-   ```
-
-### Building Individual Services
-
-```bash
-# Build producer service
-cd producer-service
-docker build -t producer-service .
-
-# Build consumer service
-cd consumer-service
-docker build -t consumer-service .
+### docker-compose.yml (Root)
+Contains consumer service and expects producer-service container to exist:
+```yaml
+services:
+  consumer-service:
+    container_name: consumer-app
+    environment:
+      - PRODUCER_SERVICE_URL=http://producer-service:8080  # This fails!
 ```
 
-## Stopping the Application
-
-```bash
-docker-compose down
+### producer-service/docker-compose.producer.yml
+Defines the producer service with expected container name:
+```yaml
+services:
+  producer-service:
+    image: amazoncorretto:21-alpine
+    container_name: producer-service  # IntelliJ ignores this!
+    networks:
+      - app-network
 ```
 
-To remove volumes and networks:
-```bash
-docker-compose down -v --remove-orphans
+### .idea/remote-targets.xml
+IntelliJ remote target configuration that should respect container_name but doesn't:
+```xml
+<target name="producer-service" type="docker-compose">
+  <option name="serviceName" value="producer-service" />
+</target>
 ```
+
+## Expected Resolution
+IntelliJ should respect the `container_name` specified in docker-compose.yml when running services through remote targets, allowing proper service discovery between containers.
+
+## Additional Information
+- This issue prevents local development workflows where you need to:
+  1. Run dependent services via docker-compose
+  2. Run the service under development via IntelliJ for debugging
+  3. Have them communicate via container names
+
+- The issue is reproducible 100% of the time with this setup
+- Standard `docker-compose up` works correctly and uses the specified container names
